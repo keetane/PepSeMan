@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=75", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "peptide-mmp-explorer"
+version = "0.1.0"
+description = "Conservative residue-level matched molecular pair explorer for linear peptides"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+  "fastapi==0.136.1",
+  "pydantic==2.13.4",
+  "rdkit==2026.9.1",
+  "uvicorn[standard]==0.38.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "httpx==0.28.1",
+  "pytest==8.4.2",
+  "pytest-cov==7.0.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["app*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+pythonpath = ["."]
+

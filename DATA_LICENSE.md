@@ -1,0 +1,28 @@
+# Local test data: provenance and publication status
+
+The source CSVs below are local test inputs expected under `data/source/`; they and the derived `templates/sequence_dictionary.json` are **not tracked in this source-only release**. They contain or are derived from ChEMBL database exports and are **not** covered by PepSeMan's MIT software license. This public repository was initialized from a source-only snapshot, without the earlier dataset commits. The prior repository was retained as a private archive; forks, clones, or cached views of earlier revisions may still exist elsewhere. GitHub Pages publication has been canceled.
+
+| File | Provenance recorded in this repository | Data terms |
+| --- | --- | --- |
+| `data/source/20261030_MDM2.csv` | ChEMBL bioactivity export for [target CHEMBL5023](https://www.ebi.ac.uk/chembl/explore/target/CHEMBL5023), containing source rows attributed in the CSV to scientific literature and BindingDB patent bioactivity data. | ChEMBL database: CC BY-SA 3.0 Unported. |
+| `data/source/20261030_GLP-1.csv` | [ChEMBL compound collection](https://www.ebi.ac.uk/chembl/explore/compounds/) identified by the CSV's `Compound ChEMBL ID` column. The exact selection filter behind the local filename is not recorded. | ChEMBL database: CC BY-SA 3.0 Unported. |
+| `data/source/20261030_Grb2-SH2_S.csv` | ChEMBL activity rows from [document CHEMBL1144969](https://www.ebi.ac.uk/chembl/explore/document/CHEMBL1144969). | ChEMBL database: CC BY-SA 3.0 Unported; underlying article has its own terms. |
+| `data/source/20261030_MEGA-A4_S.csv` | ChEMBL activity rows from [document CHEMBL5154904](https://www.ebi.ac.uk/chembl/explore/document/CHEMBL5154904). | ChEMBL database: CC BY-SA 3.0 Unported; underlying article has its own terms. |
+| `data/source/20261030_Oxytocin_S.csv` | ChEMBL activity rows from [document CHEMBL3244056](https://www.ebi.ac.uk/chembl/explore/document/CHEMBL3244056). | ChEMBL database: CC BY-SA 3.0 Unported; underlying article has its own terms. |
+| `data/source/20261030_RGD_H2T.csv` | ChEMBL activity rows from [document CHEMBL4765475](https://www.ebi.ac.uk/chembl/explore/document/CHEMBL4765475). | ChEMBL database: CC BY-SA 3.0 Unported; underlying article has its own terms. |
+| `data/source/20261030_UbE2.csv` | ChEMBL activity rows from [document CHEMBL1153736](https://www.ebi.ac.uk/chembl/explore/document/CHEMBL1153736). | ChEMBL database: CC BY-SA 3.0 Unported; underlying article has its own terms. |
+| `data/source/20261030_oxitosin_SS.csv` | Byte-identical duplicate of `20261030_Oxytocin_S.csv`, retained locally but excluded from the combined test import to avoid double counting. | Same as the Oxytocin source. |
+| `data/source/RAP1.csv` | User-supplied 25-row ChEMBL activity export from [document CHEMBL3751807](https://www.ebi.ac.uk/chembl/explore/document/CHEMBL3751807), used locally to test structurally inferred triazole bridges. The exact ChEMBL release and download details are not recorded. | ChEMBL database: CC BY-SA 3.0 Unported; underlying article has its own terms. |
+| `templates/sequence_dictionary.json` | PepSeMan-generated selection and residue descriptors from local project imports. | Local only; CC BY-SA 3.0 Unported would apply to publication of any adapted ChEMBL data. |
+
+ChEMBL is provided by EMBL-EBI under the [Creative Commons Attribution-ShareAlike 3.0 Unported license](https://creativecommons.org/licenses/by-sa/3.0/). See [ChEMBL's licensing FAQ](https://chembl.gitbook.io/chembl-interface-documentation/frequently-asked-questions/general-questions#can-you-provide-more-details-on-licensing). Reuse of these data requires appropriate ChEMBL attribution, a link to that license, and ShareAlike treatment of adaptations. No endorsement by ChEMBL or EMBL-EBI is implied.
+
+Please cite: Zdrazil B, et al. *The ChEMBL Database in 2023: a drug discovery platform spanning multiple bioactivity data types and time periods.* Nucleic Acids Research 52(D1), D1180–D1192 (2024). [doi:10.1093/nar/gkad1004](https://doi.org/10.1093/nar/gkad1004).
+
+These files are selected/exported subsets, and the dictionary is generated from their structures. The exact ChEMBL release, download date, original export URLs, and any additional transformations before the files entered this repository are **not recorded**. Do not cite a specific release or describe the files as unmodified exports without further evidence. If those details become available, update this notice without rewriting the source CSVs.
+
+The linked target and document pages identify source records, but do not reconstruct the exact historical CSV export filters or release. `oxitosin_SS` repeats the Oxytocin_S data byte-for-byte.
+
+ChEMBL also [warns](https://chembl.gitbook.io/chembl-interface-documentation/frequently-asked-questions/general-questions#can-you-provide-more-details-on-licensing) that some compound-property calculations are derived from commercial software and may have additional conditions. The CSVs include calculated-property columns. This notice does not grant rights beyond those held by ChEMBL or other upstream parties; review those conditions before extracting such columns for separate uses, especially model training.
+
+This GitHub release is source-code-only: it includes attribution links but no source CSVs, previews, or local dictionary. **This is an attribution notice, not a legal clearance of every upstream field.** Confirm the intended reuse of any data before separately publishing it. Old commit IDs, forks, clones, and caches outside this new repository may still expose earlier copies; contact their owners or GitHub as appropriate if further removal is required.

@@ -1,0 +1,17 @@
+{
+  "name": "PepSeMan",
+  "short_name": "PepSeMan",
+  "description": "Residue-level matched molecular pair explorer for linear peptides",
+  "start_url": "/?project=1&tab=Project",
+  "display": "standalone",
+  "background_color": "#edf1eb",
+  "theme_color": "#0c3034",
+  "icons": [
+    {
+      "src": "/app-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
